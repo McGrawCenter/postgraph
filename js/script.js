@@ -19,6 +19,10 @@ jQuery(document).ready(function(){
 			    h = jQuery('#graph-container').height()
 			var offset_x = (w/2)*-1,
 			    offset_y = (h/2)*-1;
+			    
+			if(jQuery('#graph-container-nav').length > 0) { 
+			     offset_x = offset_x - (offset_x * 0.2);
+			 }
 
 			var svg = d3.select("#graph-canvas").append("svg")
 			    .attr("width", '100%')
@@ -77,10 +81,9 @@ jQuery(document).ready(function(){
 
 
 	jQuery('.setcat').click(function(e){
-	 var id = jQuery(this).attr('rel');
-	 renderGraph([id]);
-	 e.preventDefault();
-	
+	   var id = jQuery(this).attr('rel');
+	   renderGraph([id]);
+	   e.preventDefault();
 	});
 
 

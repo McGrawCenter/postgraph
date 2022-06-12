@@ -15,7 +15,8 @@
 
 
 #graph-container {
-width:100%;height:500px;
+  width:100%;
+  height:500px;
   border:solid 1px black;
   position:relative
 }
@@ -29,4 +30,7 @@ width:100%;height:500px;
   padding:2%;
   overflow:hidden;
   overflow-y:scroll;
+  background: rgba(256,256,256,0.5);
 }
+#graph-container-nav ul { padding:0px; }
+#graph-container-nav ul li { list-style-type:none; }

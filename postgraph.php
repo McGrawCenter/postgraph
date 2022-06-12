@@ -70,8 +70,9 @@ class PostGraph {
 	  if($cats = get_categories()) {
 	    $returnStr = "<ul>";
 	    foreach($cats as $cat) {
-	       $returnStr .= "<li style='color:white'><a href='#' class='setcat' rel='{$cat->term_id}'>{$cat->name}</a></li>";
-	    }    
+	       $returnStr .= "<li><a href='#' class='setcat' rel='{$cat->term_id}'>{$cat->name}</a></li>";
+	    } 
+	    $returnStr .= "<li><a href='#' class='setcat' rel=''>Show All</a></li>";   
 	    $returnStr .= "<ul>";    
 	  }
 	  
